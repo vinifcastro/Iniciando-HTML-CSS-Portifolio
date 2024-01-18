@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100;400&display=swap');
 
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+}
+
 body {
-    height: 100vh; /* Colocar o body do tamanho da tela do dispositivo (legal ser padrão) */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;/*  Colocar o body do tamanho da tela do dispositivo (legal ser padrão) */
     box-sizing: border-box; /* Mantém todo o conteudo da pagina, dentro dela (legal ser padrão) */
     background-color: black;
-    color: #f6f6f6;
+    color: var(--cor-secundaria);
 }
 
 .destaque_titulo {
-    color: #22D4FD;
+    color: var(--cor-terciaria);
 }
 
 .apresentacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10% 15%;
+    padding: 4% 15% 4% 15%;
 }
 
 .apresentacao__conteudo {
@@ -38,10 +46,18 @@ body {
 .apresentacao__conteudo__links{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 
-.apresentacao__conteudo__links_botoes {
-    background-color: #22D4FD;
+.apresentacao__conteudo__links__botoes {
+    /* background-color: var(--cor-terciaria); */
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cor-terciaria);
     width: 280px;
     text-align: center;
     border-radius: 16px;
@@ -49,6 +65,52 @@ body {
     padding: 21.5px 0;
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+.apresentacao__conteudo__links__botoes:hover {
+    background-color: #272727;
+    transition: 0.7s;
+}
+
+.apresentacao__conteudo__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.apresentacao__conteudo__links__instagram {
+    width: 32px;
+    height: 32px;
+}
+
+.rodape {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cor-terciaria);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--cor-principal);
+    padding: 23.64px 0;
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
 }
